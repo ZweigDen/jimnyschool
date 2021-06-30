@@ -1,0 +1,12 @@
+// 物學案 就職 對象
+.magnifyText {
+    transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.magnifyText:hover {
+    transform: scale(1.25);
+}
+
+.magnifyText:active {
+    transform: scale(.8);
+}

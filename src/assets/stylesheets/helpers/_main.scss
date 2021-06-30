@@ -1,0 +1,92 @@
+html{
+    overflow-x: hidden;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, “Microsoft JhengHei”, Roboto, “Helvetica Neue”, Arial, sans-serif;
+    line-height:1.5;
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow-x: hidden;
+    }
+    body::-webkit-scrollbar {
+        display: none;
+    }
+h1, h2, h3, h4, h5, h6{
+    line-height:1.2;
+    margin-bottom: 0px;
+    }
+    
+img{
+    display:block;
+    max-width: 100%;
+    height: auto;
+}
+* {
+    box-sizing: border-box;
+}
+.h130{
+    height: 230px;
+}
+.h100vh{
+    height: 100vh;
+}
+.h50vh{
+    height:50vh;
+}
+.h25vh{
+    height: 25vh;
+}
+.w-49{
+    width: 49%;
+}
+.zIndex11{
+    z-index: 111;
+}
+.zIndex-1{
+    z-index: -11;
+}
+.advantageBox{
+    margin-right: -50%;
+    border: 10px solid #fff;
+    border-bottom: 0px;
+}
+.bgSet{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.fixedBottomRight{
+    position:fixed;
+    bottom:0;
+    right:0;
+    display: inline;
+    z-index: 11;
+}
+.productHeader {
+    height: 597px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.w166 img{
+    width: 126px;
+    height: 95px;
+}
+// 圖片模糊
+.backdropInvert {
+    transition: 1s all;
+  }
+.backdropInvert:hover {
+    backdrop-filter: blur(5px);
+  }
+// 圖片放大
+.pic {
+    overflow:hidden;
+    img {
+        transform:scale(1,1);transition: all 1s ease-out;
+    }
+    img:hover {
+        transform:scale(1.2,1.2);
+    }
+}

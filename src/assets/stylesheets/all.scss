@@ -1,0 +1,24 @@
+@import "~bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/bootstrap";
+
+// helpers
+@import "./helpers/main";
+
+// components
+@import "./components/iconHover";
+@import "./components/magnify";
+@import "./components/linkHover";
+@import "./components/detailBox";
+@import "./components/swiper1"; //首頁跑馬燈
+@import "./components/swiper2"; //pickup
+@import "./components/pickUp"; //pickup
+@import "./components/newsBlog";
+@import "./components/login";
+@import "./components/menuBar";
+@import "./components/offcanvas";
+@import "./components/pipalukBtn";
+@import "./components/wrapper";
+@import "./components/carouselFooter";
+//teacher
