@@ -121,12 +121,17 @@
 import Swiper from 'swiper/bundle';
 
 export default {
+  data() {
+    return {
+      swiper: '',
+    };
+  },
   components: {
     // eslint-disable-next-line vue/no-unused-components
     Swiper,
   },
   mounted() {
-    const swiper = new Swiper('.currSwiper', {
+    this.swiper = new Swiper('.currSwiper', {
       spaceBetween: 30,
       centeredSlides: true,
       autoplay: {

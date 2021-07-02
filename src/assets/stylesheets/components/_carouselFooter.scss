@@ -46,14 +46,14 @@
         display: flex;
         animation: marquee 60s infinite linear;
         .picCour {
-            flex-basis: 20%;
+            // flex-basis: 20%;
             flex-shrink: 0;
-            @include media(1024) {
-                flex-basis: 25%;
-            }
-            @include media(768) {
-                flex-basis: 33.33%;
-            }
+            // @include media(1024) {
+            //     flex-basis: 25%;
+            // }
+            // @include media(768) {
+            //     flex-basis: 33.33%;
+            // }
         }
     }
 }
