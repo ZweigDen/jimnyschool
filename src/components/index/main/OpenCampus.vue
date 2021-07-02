@@ -1,7 +1,7 @@
 <template>
-  <section class="bg-white pr-lg-7 pr-sm-5 pb-sm-9">
+  <section class="bg-white pe-lg-7 pe-sm-5 pb-sm-9">
     <div class="position-relative">
-      <img src="../../../assets/images/S__7250037.jpg" alt="" class="openCamp" />
+      <img src="@/assets/images/S__7250037.jpg" alt="" class="openCamp" />
       <div class="bg-white p-lg-7 p-2 openCamp openCampPostion">
         <div data-aos="animate__fadeInLeft">
           <h4 class="mb-4">오픈 캠퍼스</h4>

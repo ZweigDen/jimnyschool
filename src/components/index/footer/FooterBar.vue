@@ -5,7 +5,7 @@
         <a
           href="#"
           class="border-bottom
-             border-dark pb-1 d-flex
+             border-light pb-1 d-flex
              align-items-center text-decoration-none
              text-white icon mb-2 pb-2"
         >
@@ -31,7 +31,7 @@
         <a
           href="#"
           class="border-bottom
-             border-dark
+             border-light
               pb-1 d-flex
               align-items-center
               text-decoration-none
@@ -60,7 +60,7 @@
         <a
           href="#"
           class="border-bottom
-            border-dark
+            border-light
             pb-1
             d-flex
             align-items-center
@@ -89,7 +89,7 @@
         <a
           href="#"
           class="border-bottom
-            border-dark
+            border-light
             pb-1
             d-flex
             align-items-center
@@ -115,7 +115,7 @@
         <a
           href="product.html"
           class="border-bottom
-             border-dark pb-1
+             border-light pb-1
               d-flex
               align-items-center
               text-decoration-none
@@ -143,7 +143,7 @@
         <a
           href="#"
           class="border-bottom
-             border-dark
+             border-light
               pb-1 d-flex
                align-items-center
                 text-decoration-none
@@ -157,7 +157,7 @@
         <a
           href="#"
           class="border-bottom
-            border-dark
+            border-light
             pb-1 d-flex
             align-items-center
              text-decoration-none
@@ -171,7 +171,7 @@
         <a
           href="#"
           class="border-bottom
-             border-dark
+             border-light
              pb-1
              d-flex
              align-items-center

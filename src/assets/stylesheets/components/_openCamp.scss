@@ -1,0 +1,17 @@
+.openCamp{
+    border-radius: 0 12px 12px 0;
+}
+.openCampPostion{
+    position: absolute;
+    top:40%;
+}
+
+@media(max-width:375px){
+    .openCamp{
+        border-radius: 0px;
+        top:0px;
+    }
+    .openCampPostion{
+        position: relative;
+    }
+}

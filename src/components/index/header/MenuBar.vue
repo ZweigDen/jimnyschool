@@ -112,8 +112,8 @@
         </div>
         <div class="d-flex justify-content-between">
           <div>
-            <a
-              href="product.html"
+            <router-link
+            to="/front/courses"
               class="border-bottom
              border-dark pb-1
               d-flex
@@ -126,7 +126,7 @@
             >
               <h4 class="px-1 snapLeftBtn1">></h4>
               <h4 class="ms-1">課程購買</h4>
-            </a>
+            </router-link>
             <ul class="list-unstyled">
               <li class="mb-1 magnifyText">
                 <a href="product.html#language" class="text-secondary text-decoration-none"
@@ -186,8 +186,8 @@
               <h4 class="px-1 snapLeftBtn1">></h4>
               <h4 class="ms-1">人才招募</h4>
             </a>
-            <a
-              href="#"
+            <router-link
+              to="/front/login"
               class="border-bottom
             border-dark
             pb-1 d-flex
@@ -199,7 +199,7 @@
             >
               <h4 class="px-1 snapLeftBtn1">></h4>
               <h4 class="ms-1">登入</h4>
-            </a>
+            </router-link>
             <a
               href="#"
               class="border-bottom

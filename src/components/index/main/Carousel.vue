@@ -197,6 +197,71 @@
             />
           </div>
         </div>
+        <!-- 四組 -->
+        <div class="picCour">
+          <img
+            src="@/assets/images/carousel/carousel-01.jpg"
+            alt=""
+            style="width:600px"
+            class="h-100 p-1"
+          />
+        </div>
+        <div class="picCour">
+          <div class="d-flex">
+            <img
+              src="@/assets/images/carousel/carousel-02.jpg"
+              alt=""
+              style="width:300px;height:300px"
+              class="p-1"
+            />
+            <div>
+              <img
+                src="@/assets/images/carousel/carousel-07.jpg"
+                alt=""
+                style="width:300px;height:300px"
+                class="p-1"
+              />
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="d-flex">
+              <div>
+                <img
+                  src="@/assets/images/carousel/carousel-03.jpg"
+                  style="width:150px;height:150px"
+                  alt=""
+                  class="p-1"
+                />
+                <img
+                  src="@/assets/images/carousel/carousel-04.jpg"
+                  style="width:150px;height:150px"
+                  alt=""
+                  class="p-1"
+                />
+              </div>
+              <div>
+                <img
+                  src="@/assets/images/carousel/carousel-05.jpg"
+                  style="width:150px;height:150px"
+                  alt=""
+                  class="p-1"
+                />
+                <img
+                  src="@/assets/images/carousel/carousel-06.jpg"
+                  style="width:150px;height:150px"
+                  alt=""
+                  class="p-1"
+                />
+              </div>
+            </div>
+            <img
+              src="@/assets/images/carousel/carousel-08.jpg"
+              alt=""
+              style="width:300px;height:300px"
+              class="p-1"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </section>
