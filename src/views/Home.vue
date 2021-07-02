@@ -9,7 +9,7 @@
     <Menubar></Menubar>
   </header>
   <!-- content -->
-  <main>
+  <main id="main">
     <!-- pick up -->
     <Pickup :list="products"></Pickup>
     <!-- news & blog -->
@@ -95,9 +95,6 @@ export default {
         .catch((err) => {
           console.log(err);
         });
-    },
-    getapp() {
-      console.log('ok');
     },
   },
 };

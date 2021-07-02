@@ -39,7 +39,7 @@
               pb-2"
         >
           <h4 class="px-1 text-white snapLeftBtn">></h4>
-          <h4 class="ml-1">學校介紹</h4>
+          <h4 class="ms-1">學校介紹</h4>
         </a>
         <ul class="list-unstyled">
           <li class="mb-1 magnifyText">
@@ -71,7 +71,7 @@
             pb-2"
         >
           <h4 class="px-1 text-white snapLeftBtn">></h4>
-          <h4 class="ml-1">師資介紹</h4>
+          <h4 class="ms-1">師資介紹</h4>
         </a>
         <ul class="list-unstyled">
           <li class="mb-1 magnifyText">
@@ -97,7 +97,7 @@
             text-white icon mb-2 pb-2"
         >
           <h4 class="px-1 text-white snapLeftBtn">></h4>
-          <h4 class="ml-1">xxxx</h4>
+          <h4 class="ms-1">xxxx</h4>
         </a>
         <ul class="list-unstyled">
           <li class="mb-1 magnifyText">
@@ -125,7 +125,7 @@
               pb-2"
         >
           <h4 class="px-1 text-white snapLeftBtn">></h4>
-          <h4 class="ml-1">課程購買</h4>
+          <h4 class="ms-1">課程購買</h4>
         </a>
         <ul class="list-unstyled">
           <li class="mb-1 magnifyText">
@@ -152,7 +152,7 @@
                 pb-2"
         >
           <h4 class="px-1 text-white snapLeftBtn">></h4>
-          <h4 class="ml-1">人才招募</h4>
+          <h4 class="ms-1">人才招募</h4>
         </a>
         <a
           href="#"
@@ -166,7 +166,7 @@
              pb-2"
         >
           <h4 class="px-1 text-white snapLeftBtn">></h4>
-          <h4 class="ml-1">登入</h4>
+          <h4 class="ms-1">登入</h4>
         </a>
         <a
           href="#"
@@ -181,7 +181,7 @@
              pb-2"
         >
           <h4 class="px-1 text-white snapLeftBtn">></h4>
-          <h4 class="ml-1">就按資格</h4>
+          <h4 class="ms-1">就按資格</h4>
         </a>
       </div>
     </div>

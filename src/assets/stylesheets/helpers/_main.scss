@@ -37,6 +37,10 @@ img{
 .h25vh{
     height: 25vh;
 }
+.wmin250{
+    min-width: 250px;
+    max-width: 250px;
+}
 .w-49{
     width: 49%;
 }
@@ -55,6 +59,9 @@ img{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+}
+.bg-dark1{
+    background-color: #1d1d1d;
 }
 .fixedBottomRight{
     position:fixed;

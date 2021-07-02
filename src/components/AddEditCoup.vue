@@ -20,7 +20,7 @@
         </div>
         <div class="modal-body">
           <div class="row">
-            <div class="col-sm-4">
+            <!-- <div class="col-sm-4">
               <div class="form-group">
                 <label for="imageUrl">主要圖片</label>
                 <input
@@ -72,8 +72,8 @@
                   新增陣列圖片
                 </button>
               </div>
-            </div>
-            <div class="col-sm-8">
+            </div> -->
+            <div class="col">
               <div class="form-group">
                 <label for="title">優惠標題</label>
                 <input
@@ -84,75 +84,32 @@
                   placeholder="請輸入標題"
                 />
               </div>
-
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label for="category">優惠分類</label>
-                  <select class="form-control" v-model="tempProduct.category">
-                    <option disabled selected>請選擇分類</option>
-                    <option>語文</option>
-                    <option>數理</option>
-                    <option>人生</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="price">授課講師</label>
-                  <select class="form-control" v-model="tempProduct.unit">
-                    <option disabled selected>請選擇講師</option>
-                    <option>彭校長</option>
-                    <option>呼嚕貓</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="origin_price">課堂時數</label>
+                  <label for="percent">優惠折扣</label>
                   <input
                     id="origin_price"
-                    v-model.number="tempProduct.origin_price"
-                    type="number"
+                    v-model.number="tempProduct.percent"
+                    type="percent"
                     min="1"
                     class="form-control"
-                    placeholder="請輸入數字"
+                    placeholder="請輸入"
                   />
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="price">售價</label>
+                  <label for="date">code</label>
                   <input
-                    id="price"
-                    v-model.number="tempProduct.price"
-                    type="number"
+                    id="date"
+                    v-model.number="tempProduct.due_date"
+                    type="date"
                     min="0"
                     class="form-control"
-                    placeholder="請輸入售價"
+                    placeholder="請輸入日期"
                   />
                 </div>
               </div>
               <hr />
 
-              <div class="form-group">
-                <label for="description">課程描述</label>
-                <textarea
-                  id="description"
-                  v-model="tempProduct.description"
-                  type="text"
-                  class="form-control"
-                  placeholder="請輸入課程描述"
-                >
-                </textarea>
-              </div>
-              <div class="form-group">
-                <label for="content">課程內容</label>
-                <textarea
-                  id="content"
-                  v-model="tempProduct.content"
-                  type="text"
-                  class="form-control"
-                  placeholder="請輸入說明內容"
-                >
-                </textarea>
-              </div>
               <div class="form-group">
                 <div class="form-check">
                   <input

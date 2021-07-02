@@ -3,6 +3,7 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 // bootstrap
 import 'bootstrap';
+// from
 import {
   Field, Form, ErrorMessage, defineRule, configure,
 } from 'vee-validate';

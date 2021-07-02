@@ -2,70 +2,200 @@
   <section id="marquee">
     <div class="view bg-white">
       <div class="pic-container">
+        <!-- 一組 -->
         <div class="picCour">
-          <img src="https://picsum.photos/300/300?random=10" alt="" />
+          <img
+            src="@/assets/images/carousel/carousel-09.jpg"
+            alt=""
+            style="width:600px"
+            class="h-100 p-1"
+          />
         </div>
         <div class="picCour">
-          <img src="https://picsum.photos/300/300?random=20" class="p-1" alt="" />
-        </div>
-        <div class="picCour">
-          <img src="https://picsum.photos/300/300?random=30" alt="" />
-        </div>
-        <div class="picCour">
-          <img src="https://picsum.photos/300/300?random=40" alt="" />
-        </div>
-        <div class="picCour">
-          <section class="d-flex justify-content-between mb-3 px-7">
-            <div
-              class="detailBox rounded"
-              :style="{
-                'background-image': 'url(' + require('../../../assets/images/header-01.jpg') + ')',
-              }"
-            ></div>
-            <div class="d-flex flex-column justify-content-between w-50">
-              <div
-                class="detailBox2 rounded"
-                :style="{
-                  'background-image':
-                    'url(' + require('../../../assets/images/header-02.jpg') + ')',
-                }"
-              ></div>
-              <div class="d-flex justify-content-between w-100">
-                <div
-                  class="detailBox3 rounded w-50"
-                  :style="{
-                    'background-image':
-                      'url(' + require('../../../assets/images/header-03.jpg') + ')',
-                  }"
-                ></div>
-                <div class="d-flex flex-column justify-content-between w-49">
-                  <div
-                    class="detailBox4 rounded"
-                    :style="{
-                      'background-image':
-                        'url(' + require('../../../assets/images/header-04.jpg') + ')',
-                    }"
-                  ></div>
-                  <button type="button" class="text-center btn btn-dark py-2">加入購物車</button>
+          <div class="d-flex">
+            <img
+              src="@/assets/images/carousel/carousel-10.jpg"
+              alt=""
+              style="width:300px;height:300px"
+              class="p-1"
+            />
+            <div>
+              <div class="d-flex">
+                <div>
+                  <img
+                    src="@/assets/images/carousel/carousel-11.jpg"
+                    style="width:150px;height:150px"
+                    alt=""
+                    class="p-1"
+                  />
+                  <img
+                    src="@/assets/images/carousel/carousel-12.jpg"
+                    style="width:150px;height:150px"
+                    alt=""
+                    class="p-1"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="@/assets/images/carousel/carousel-13.jpg"
+                    style="width:150px;height:150px"
+                    alt=""
+                    class="p-1"
+                  />
+                  <img
+                    src="@/assets/images/carousel/carousel-14.jpg"
+                    style="width:150px;height:150px"
+                    alt=""
+                    class="p-1"
+                  />
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+          <div class="d-flex">
+            <img
+              src="@/assets/images/carousel/carousel-15.jpg"
+              alt=""
+              style="width:300px;height:300px"
+              class="p-1"
+            />
+            <img
+              src="@/assets/images/carousel/carousel-16.jpg"
+              alt=""
+              style="width:300px;height:300px"
+              class="p-1"
+            />
+          </div>
+        </div>
+        <!-- 二組 -->
+        <div class="picCour">
+          <img
+            src="@/assets/images/carousel/carousel-01.jpg"
+            alt=""
+            style="width:600px"
+            class="h-100 p-1"
+          />
         </div>
         <div class="picCour">
-          <img src="https://picsum.photos/300/300?random=10" alt="" />
+          <div class="d-flex">
+            <img
+              src="@/assets/images/carousel/carousel-02.jpg"
+              alt=""
+              style="width:300px;height:300px"
+              class="p-1"
+            />
+            <div>
+              <img
+                src="@/assets/images/carousel/carousel-07.jpg"
+                alt=""
+                style="width:300px;height:300px"
+                class="p-1"
+              />
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="d-flex">
+              <div>
+                <img
+                  src="@/assets/images/carousel/carousel-03.jpg"
+                  style="width:150px;height:150px"
+                  alt=""
+                  class="p-1"
+                />
+                <img
+                  src="@/assets/images/carousel/carousel-04.jpg"
+                  style="width:150px;height:150px"
+                  alt=""
+                  class="p-1"
+                />
+              </div>
+              <div>
+                <img
+                  src="@/assets/images/carousel/carousel-05.jpg"
+                  style="width:150px;height:150px"
+                  alt=""
+                  class="p-1"
+                />
+                <img
+                  src="@/assets/images/carousel/carousel-06.jpg"
+                  style="width:150px;height:150px"
+                  alt=""
+                  class="p-1"
+                />
+              </div>
+            </div>
+            <img
+              src="@/assets/images/carousel/carousel-08.jpg"
+              alt=""
+              style="width:300px;height:300px"
+              class="p-1"
+            />
+          </div>
+        </div>
+        <!-- 三組 -->
+        <div class="picCour">
+          <img
+            src="@/assets/images/carousel/carousel-09.jpg"
+            alt=""
+            style="width:600px"
+            class="h-100 p-1"
+          />
         </div>
         <div class="picCour">
-          <img src="https://picsum.photos/300/300?random=20" alt="" />
-        </div>
-        <div class="picCour">
-          <img src="https://picsum.photos/300/300?random=30" alt="" />
-        </div>
-        <div class="picCour">
-          <img src="https://picsum.photos/300/300?random=40" alt="" />
-        </div>
-        <div class="picCour">
-          <img src="https://picsum.photos/300/300?random=50" alt="" />
+          <div class="d-flex">
+            <img
+              src="@/assets/images/carousel/carousel-10.jpg"
+              alt=""
+              style="width:300px;height:300px"
+              class="p-1"
+            />
+            <div>
+              <div class="d-flex">
+                <div>
+                  <img
+                    src="@/assets/images/carousel/carousel-11.jpg"
+                    style="width:150px;height:150px"
+                    alt=""
+                    class="p-1"
+                  />
+                  <img
+                    src="@/assets/images/carousel/carousel-12.jpg"
+                    style="width:150px;height:150px"
+                    alt=""
+                    class="p-1"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="@/assets/images/carousel/carousel-13.jpg"
+                    style="width:150px;height:150px"
+                    alt=""
+                    class="p-1"
+                  />
+                  <img
+                    src="@/assets/images/carousel/carousel-14.jpg"
+                    style="width:150px;height:150px"
+                    alt=""
+                    class="p-1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex">
+            <img
+              src="@/assets/images/carousel/carousel-15.jpg"
+              alt=""
+              style="width:300px;height:300px"
+              class="p-1"
+            />
+            <img
+              src="@/assets/images/carousel/carousel-16.jpg"
+              alt=""
+              style="width:300px;height:300px"
+              class="p-1"
+            />
+          </div>
         </div>
       </div>
     </div>

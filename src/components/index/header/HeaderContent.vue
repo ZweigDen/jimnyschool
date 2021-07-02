@@ -44,6 +44,41 @@
     </div>
   </section>
   <!-- 幻燈片 -->
+  <!-- <section class="fixed-top zIndex-1">
+    <swiper
+      class="currSwiper bgImg"
+      :slides-per-view="1"
+      :space-between="0"
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
+    >
+      <swiper-slide
+        :style="{
+          'background-image': 'url(' + require('../../../assets/images/header-01.jpg') + ')',
+        }"
+      ></swiper-slide>
+      <swiper-slide
+        :style="{
+          'background-image': 'url(' + require('../../../assets/images/header-05.jpg') + ')',
+        }"
+      ></swiper-slide>
+      <swiper-slide
+        :style="{
+          'background-image': 'url(' + require('../../../assets/images/header-08.jpg') + ')',
+        }"
+      ></swiper-slide>
+      <swiper-slide
+        :style="{
+          'background-image': 'url(' + require('../../../assets/images/header-06.jpg') + ')',
+        }"
+      ></swiper-slide>
+      <swiper-slide
+        :style="{
+          'background-image': 'url(' + require('../../../assets/images/header-07.jpg') + ')',
+        }"
+      ></swiper-slide>
+    </swiper>
+  </section> -->
   <section class="fixed-top zIndex-1">
     <div class="swiper-container currSwiper">
       <div class="swiper-wrapper bgImg">
@@ -81,3 +116,33 @@
     </div>
   </section>
 </template>
+
+<script type="module">
+import Swiper from 'swiper/bundle';
+
+export default {
+  components: {
+    // eslint-disable-next-line vue/no-unused-components
+    Swiper,
+  },
+  mounted() {
+    const swiper = new Swiper('.currSwiper', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      effect: 'fade',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  },
+};
+</script>

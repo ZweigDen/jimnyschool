@@ -4,7 +4,7 @@ const routes = [
   // 首頁
   {
     path: '/',
-    component: import('../views/Home.vue'),
+    component: () => import('../views/Home.vue'),
   },
   // 前台
   {

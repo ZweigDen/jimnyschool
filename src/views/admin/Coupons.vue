@@ -74,7 +74,7 @@
 <script>
 import Pagination from '@/components/Pagination.vue';
 import Checkdele from '@/components/CheckDele.vue';
-import Addedit from '@/components/AddEditModal.vue';
+import Addedit from '@/components/AddEditCoup.vue';
 
 export default {
   data() {

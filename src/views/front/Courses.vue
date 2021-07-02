@@ -3,10 +3,10 @@
     <p class="h1 d-flex">
       <span style="animation-delay: calc(1s * 0.1);" data-aos="animate__rotateInDownLeft"
         ><i class="fas fa-exclamation mr-3"></i></span
-      ><span style="animation-delay: calc(1s * 0.2);" data-aos="animate__rotateInDownLeft">課</span
-      ><span style="animation-delay: calc(1s * 0.3);" data-aos="animate__rotateInDownLeft">程</span
-      ><span style="animation-delay: calc(1s * 0.4);" data-aos="animate__rotateInDownLeft">購</span
-      ><span style="animation-delay: calc(1s * 0.5);" data-aos="animate__rotateInDownLeft">買</span
+      ><span style="animation-delay: calc(1s * 0.2);" data-aos="animate__rotateInDownLeft">코</span
+      ><span style="animation-delay: calc(1s * 0.3);" data-aos="animate__rotateInDownLeft">스</span
+      ><span style="animation-delay: calc(1s * 0.4);" data-aos="animate__rotateInDownLeft">구</span
+      ><span style="animation-delay: calc(1s * 0.5);" data-aos="animate__rotateInDownLeft">매</span
       ><span style="animation-delay: calc(1s * 0.6);" data-aos="animate__rotateInDownLeft">。</span>
     </p>
   </section>
@@ -19,7 +19,7 @@
   <section class="text-center container mb-7">
     <div class="row flex-column align-items-center">
       <div class="col mb-3">
-        <h3 class="mb-4">時代を生き抜く</h3>
+        <h3 class="mb-4">시대를 살아 남기</h3>
       </div>
       <div class="col mb-6">
         <h2>「高い専門性」と「豊かな人間力」<span class="h3">の育成を</span></h2>
@@ -45,7 +45,9 @@
   ></CourseProduct>
   <!-- 購物車按鈕 -->
   <section class="fixedBottomRight p-3" data-aos="animate__bounceInLeft" data-aos-offset="40">
-    <a class="text-dark btn"><i class="fas fa-shopping-cart h1 magnifyText"></i></a>
+    <a class="text-dark btn"><i class="fas fa-shopping-cart h1 magnifyText"></i>
+    </a>
+    <div class="text-light bg-warning rounded-circle text-center">{{ carts.length }}</div>
   </section>
 </template>
 

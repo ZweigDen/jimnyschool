@@ -92,15 +92,22 @@
                     <option disabled selected>請選擇分類</option>
                     <option>語文</option>
                     <option>數理</option>
-                    <option>人生</option>
+                    <option>程式</option>
+                    <option>其他</option>
+                    <option>醫護</option>
                   </select>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="price">授課講師</label>
                   <select class="form-control" v-model="tempProduct.unit">
                     <option disabled selected>請選擇講師</option>
-                    <option>彭校長</option>
-                    <option>呼嚕貓</option>
+                    <option>김정은</option>
+                    <option>시진핑</option>
+                    <option>차잉웬</option>
+                    <option>마잉주</option>
+                    <option>제임스</option>
+                    <option>눈과립</option>
+                    <option>이광수</option>
                   </select>
                 </div>
               </div>
@@ -165,8 +172,8 @@
                   />
                   <label class="form-check-label" for="is_enabled">是否啟用</label>
                 </div>
-                <!-- check -->
-                <div class="form-check d-none">
+                <!-- check購買一次 -->
+                <div class="form-check">
                   <input
                     id="is_check"
                     v-model="tempProduct.checkBtn"

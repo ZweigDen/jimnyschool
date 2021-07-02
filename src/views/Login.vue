@@ -50,7 +50,7 @@
         </svg>
       </div>
       <div class="my-5">
-        <button class="btn btn-lg btn-secondary" type="button" @click="logIn">
+        <button class="btn btn-lg btn-secondary" type="button" @click.enter="logIn">
           登入
         </button>
       </div>

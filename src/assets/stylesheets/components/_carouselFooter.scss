@@ -37,6 +37,7 @@
 #marquee {
     padding: 50px 0;
     width: 100%;
+    background: #fff;
     .view {
         overflow: hidden;
         width: 100%;
@@ -54,9 +55,5 @@
                 flex-basis: 33.33%;
             }
         }
-    }
-    img {
-        width: 100%;
-        vertical-align: middle;
     }
 }
