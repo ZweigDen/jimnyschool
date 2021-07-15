@@ -7,7 +7,7 @@
           <img
             src="@/assets/images/carousel/carousel-09.jpg"
             alt=""
-            style="width:600px"
+            style="width:400px"
             class="h-100 p-1"
           />
         </div>
@@ -16,7 +16,7 @@
             <img
               src="@/assets/images/carousel/carousel-10.jpg"
               alt=""
-              style="width:300px;height:300px"
+              style="width:200px;height:200px"
               class="p-1"
             />
             <div>
@@ -24,13 +24,13 @@
                 <div>
                   <img
                     src="@/assets/images/carousel/carousel-11.jpg"
-                    style="width:150px;height:150px"
+                    style="width:100px;height:100px"
                     alt=""
                     class="p-1"
                   />
                   <img
                     src="@/assets/images/carousel/carousel-12.jpg"
-                    style="width:150px;height:150px"
+                    style="width:100px;height:100px"
                     alt=""
                     class="p-1"
                   />
@@ -38,13 +38,13 @@
                 <div>
                   <img
                     src="@/assets/images/carousel/carousel-13.jpg"
-                    style="width:150px;height:150px"
+                    style="width:100px;height:100px"
                     alt=""
                     class="p-1"
                   />
                   <img
                     src="@/assets/images/carousel/carousel-14.jpg"
-                    style="width:150px;height:150px"
+                    style="width:100px;height:100px"
                     alt=""
                     class="p-1"
                   />
@@ -56,13 +56,13 @@
             <img
               src="@/assets/images/carousel/carousel-15.jpg"
               alt=""
-              style="width:300px;height:300px"
+              style="width:200px;height:200px"
               class="p-1"
             />
             <img
               src="@/assets/images/carousel/carousel-16.jpg"
               alt=""
-              style="width:300px;height:300px"
+              style="width:200px;height:200px"
               class="p-1"
             />
           </div>
@@ -72,7 +72,7 @@
           <img
             src="@/assets/images/carousel/carousel-01.jpg"
             alt=""
-            style="width:600px"
+            style="width:400px"
             class="h-100 p-1"
           />
         </div>
@@ -81,14 +81,14 @@
             <img
               src="@/assets/images/carousel/carousel-02.jpg"
               alt=""
-              style="width:300px;height:300px"
+              style="width:200px;height:200px"
               class="p-1"
             />
             <div>
               <img
                 src="@/assets/images/carousel/carousel-07.jpg"
                 alt=""
-                style="width:300px;height:300px"
+                style="width:200px;height:200px"
                 class="p-1"
               />
             </div>
@@ -98,13 +98,13 @@
               <div>
                 <img
                   src="@/assets/images/carousel/carousel-03.jpg"
-                  style="width:150px;height:150px"
+                  style="width:100px;height:100px"
                   alt=""
                   class="p-1"
                 />
                 <img
                   src="@/assets/images/carousel/carousel-04.jpg"
-                  style="width:150px;height:150px"
+                  style="width:100px;height:100px"
                   alt=""
                   class="p-1"
                 />
@@ -112,13 +112,13 @@
               <div>
                 <img
                   src="@/assets/images/carousel/carousel-05.jpg"
-                  style="width:150px;height:150px"
+                  style="width:100px;height:100px"
                   alt=""
                   class="p-1"
                 />
                 <img
                   src="@/assets/images/carousel/carousel-06.jpg"
-                  style="width:150px;height:150px"
+                  style="width:100px;height:100px"
                   alt=""
                   class="p-1"
                 />
@@ -127,7 +127,7 @@
             <img
               src="@/assets/images/carousel/carousel-08.jpg"
               alt=""
-              style="width:300px;height:300px"
+              style="width:200px;height:200px"
               class="p-1"
             />
           </div>
@@ -137,7 +137,7 @@
           <img
             src="@/assets/images/carousel/carousel-09.jpg"
             alt=""
-            style="width:600px"
+            style="width:400px"
             class="h-100 p-1"
           />
         </div>
@@ -146,7 +146,7 @@
             <img
               src="@/assets/images/carousel/carousel-10.jpg"
               alt=""
-              style="width:300px;height:300px"
+              style="width:200px;height:200px"
               class="p-1"
             />
             <div>
@@ -154,13 +154,13 @@
                 <div>
                   <img
                     src="@/assets/images/carousel/carousel-11.jpg"
-                    style="width:150px;height:150px"
+                    style="width:100px;height:100px"
                     alt=""
                     class="p-1"
                   />
                   <img
                     src="@/assets/images/carousel/carousel-12.jpg"
-                    style="width:150px;height:150px"
+                    style="width:100px;height:100px"
                     alt=""
                     class="p-1"
                   />
@@ -168,13 +168,13 @@
                 <div>
                   <img
                     src="@/assets/images/carousel/carousel-13.jpg"
-                    style="width:150px;height:150px"
+                    style="width:100px;height:100px"
                     alt=""
                     class="p-1"
                   />
                   <img
                     src="@/assets/images/carousel/carousel-14.jpg"
-                    style="width:150px;height:150px"
+                    style="width:100px;height:100px"
                     alt=""
                     class="p-1"
                   />
@@ -186,13 +186,13 @@
             <img
               src="@/assets/images/carousel/carousel-15.jpg"
               alt=""
-              style="width:300px;height:300px"
+              style="width:200px;height:200px"
               class="p-1"
             />
             <img
               src="@/assets/images/carousel/carousel-16.jpg"
               alt=""
-              style="width:300px;height:300px"
+              style="width:200px;height:200px"
               class="p-1"
             />
           </div>
@@ -202,7 +202,7 @@
           <img
             src="@/assets/images/carousel/carousel-01.jpg"
             alt=""
-            style="width:600px"
+            style="width:400px"
             class="h-100 p-1"
           />
         </div>
@@ -211,14 +211,14 @@
             <img
               src="@/assets/images/carousel/carousel-02.jpg"
               alt=""
-              style="width:300px;height:300px"
+              style="width:200px;height:200px"
               class="p-1"
             />
             <div>
               <img
                 src="@/assets/images/carousel/carousel-07.jpg"
                 alt=""
-                style="width:300px;height:300px"
+                style="width:200px;height:200px"
                 class="p-1"
               />
             </div>
@@ -228,13 +228,13 @@
               <div>
                 <img
                   src="@/assets/images/carousel/carousel-03.jpg"
-                  style="width:150px;height:150px"
+                  style="width:100px;height:100px"
                   alt=""
                   class="p-1"
                 />
                 <img
                   src="@/assets/images/carousel/carousel-04.jpg"
-                  style="width:150px;height:150px"
+                  style="width:100px;height:100px"
                   alt=""
                   class="p-1"
                 />
@@ -242,13 +242,13 @@
               <div>
                 <img
                   src="@/assets/images/carousel/carousel-05.jpg"
-                  style="width:150px;height:150px"
+                  style="width:100px;height:100px"
                   alt=""
                   class="p-1"
                 />
                 <img
                   src="@/assets/images/carousel/carousel-06.jpg"
-                  style="width:150px;height:150px"
+                  style="width:100px;height:100px"
                   alt=""
                   class="p-1"
                 />
@@ -257,7 +257,7 @@
             <img
               src="@/assets/images/carousel/carousel-08.jpg"
               alt=""
-              style="width:300px;height:300px"
+              style="width:200px;height:200px"
               class="p-1"
             />
           </div>

@@ -11,7 +11,7 @@
   <!-- content -->
   <main id="main">
     <!-- pick up -->
-    <Pickup :list="products"></Pickup>
+    <Pickup></Pickup>
     <!-- news & blog -->
     <NewsBlog></NewsBlog>
     <!-- 優點 -->
@@ -34,7 +34,21 @@
     <!-- footerImformation -->
     <FooterImformation></FooterImformation>
     <!-- 右下角廣告 -->
-    <section class="fixedBottomRight m-5" data-aos="animate__bounceInLeft"></section>
+    <section
+      class="alert
+      d-none
+      d-sm-block
+        alert-dismissible fade show
+        fixedBottomRight advertising m-5
+        shadow-lg rounded"
+      role="alert"
+      data-aos="animate__bounceInLeft"
+      :style="{
+        'background-image': 'url(' + require('../assets/images/covid19.jpg') + ')',
+      }"
+    >
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </section>
   </footer>
 </template>
 
@@ -58,9 +72,7 @@ import FooterImformation from '../components/index/footer/FooterImformation.vue'
 
 export default {
   data() {
-    return {
-      products: [],
-    };
+    return {};
   },
   components: {
     Banner,
@@ -77,38 +89,42 @@ export default {
     FooterBar,
     FooterImformation,
   },
-  mounted() {
-    this.getProducts();
-  },
-  methods: {
-    getProducts() {
-      const url = `${process.env.VUE_APP_URL}/api/${process.env.VUE_APP_PATH}/products`;
-      this.$http
-        .get(url)
-        .then((res) => {
-          if (res.data.success) {
-            this.products = res.data.products;
-          } else {
-            console.log(res);
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    },
-  },
+  mounted() {},
+  methods: {},
 };
 </script>
 
 <style lang="scss">
-.tittleIndex a {
-  color: #fff;
+@media (max-width: 767px){
+    .offcanContent{
+        width: 100%;
+    }
+    .pickBox{
+        width: 307px;
+        height: 216px;
+    }
+    .pickUp{
+        margin-top: -160px;
+        border-radius: 0 0 0 0;
+    }
+    .bg3 &.bg4{
+        max-height: 479px;
+    }
+    .w166 img{
+        width: 95px;
+        height: 95px;
+    }
+    .flexPostion{
+        top: 40%;
+    }
 }
-@media (max-width: 375px) {
+@media (max-width: 415px) {
   .tittleFixed {
     position: fixed;
     top: 0;
     z-index: 22;
+    width: 100%;
+    height: 60px;
   }
   .tittleIndex a {
     color: #000;
@@ -120,10 +136,11 @@ export default {
     font-size: 36px;
   }
   .pickUp {
-    margin-top: 0px;
+    margin-top: -120px;
   }
   .nbMargin {
-    margin-top: -220px;
+    margin-top: -200px;
+    height: 160vh;
   }
   .openCamp {
     border-radius: 0px;
@@ -135,16 +152,17 @@ export default {
   .flexPostion {
     position: relative;
   }
-  .advantageBg {
-    &1,
-    &2,
-    &3,
-    &4 {
-      height: 256px;
-    }
-  }
   .flexPostion {
     color: #000;
+  }
+  // banner
+  .menuAnimated {
+    top: 0;
+    height: 60px;
+  }
+  .bar {
+    background-color: #000;
+    width: 40px;
   }
 }
 </style>

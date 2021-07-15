@@ -3,28 +3,28 @@
     <div data-aos="animate__bounceInDown">
       <p class="h6">Grow up. Turn professional.</p>
       <p class="h1 d-flex">
-        <span style="animation-delay: calc(1s * 0.4);" data-aos="animate__rotateInDownLeft">큰</span
+        <span style="animation-delay: calc(1s * 0.4);" data-aos="animate__rotateInDownLeft">你</span
         ><span style="animation-delay: calc(1s * 0.6);" data-aos="animate__rotateInDownLeft"
-          >사</span
+          >要</span
         ><span style="animation-delay: calc(1s * 0.8);" data-aos="animate__rotateInDownLeft"
-          >에</span
-        ><span style="animation-delay: calc(1s * 1);" data-aos="animate__rotateInDownLeft">람</span
+          >的</span
+        ><span style="animation-delay: calc(1s * 1);" data-aos="animate__rotateInDownLeft">專</span
         ><span style="animation-delay: calc(1s * 1.2);" data-aos="animate__rotateInDownLeft"
-          >들</span
+          >業</span
         ><span style="animation-delay: calc(1s * 1.4);" data-aos="animate__rotateInDownLeft"
-          >。</span
+          >，</span
         >
       </p>
       <p class="h1 d-flex mb-4">
         <span style="animation-delay: calc(1s * 1.4);" data-aos="animate__rotateInDownRight"
-          >에</span
+          >由</span
         ><span style="animation-delay: calc(1s * 1.2);" data-aos="animate__rotateInDownRight"
-          >열</span
-        ><span style="animation-delay: calc(1s * 1);" data-aos="animate__rotateInDownRight">하</span
+          >我</span
+        ><span style="animation-delay: calc(1s * 1);" data-aos="animate__rotateInDownRight">們</span
         ><span style="animation-delay: calc(1s * 0.8);" data-aos="animate__rotateInDownRight"
-          >다</span
+          >培</span
         ><span style="animation-delay: calc(1s * 0.6);" data-aos="animate__rotateInDownRight"
-          >히</span
+          >訓</span
         ><span style="animation-delay: calc(1s * 0.4);" data-aos="animate__rotateInDownRight"
           >。</span
         >
@@ -32,8 +32,7 @@
       <div class="row">
         <div class="col-lg-4 col-sm-6 col-9">
           <h5>
-            IT 및 비즈니스 전문 학교 LULU. 졸업생의 상당수가 여러 분야에서 활약하고 있습니다. 삶은
-            각각 그렇지만, 모두, 제대로 된 성인으로. 그리고 지금. 당신은 어른의 어귀에 서 있습니다.
+            各類專長職業學校-呼嚕貓學院。我們的許多畢業生活躍於生活環境險惡的苗栗國。為了突破現況，作為一個堅實的成年人。現在！你站在成為大人的門口。
           </h5>
         </div>
       </div>

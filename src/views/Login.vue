@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5 d-flex justify-content-center">
+  <div class="container mt-5 d-flex justify-content-center h50vh p-7">
     <Form class="text-center" @submit.prevent="logIn">
       <div class="input input--nao">
         <label class="input__label input__label--nao" for="inputEmail">

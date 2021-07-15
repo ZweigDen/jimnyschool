@@ -91,23 +91,23 @@
                   <select class="form-control" v-model="tempProduct.category">
                     <option disabled selected>請選擇分類</option>
                     <option>語文</option>
-                    <option>數理</option>
                     <option>程式</option>
-                    <option>其他</option>
+                    <option>商業</option>
                     <option>醫護</option>
+                    <option>其他</option>
                   </select>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="price">授課講師</label>
                   <select class="form-control" v-model="tempProduct.unit">
                     <option disabled selected>請選擇講師</option>
-                    <option>김정은</option>
-                    <option>시진핑</option>
-                    <option>차잉웬</option>
-                    <option>마잉주</option>
-                    <option>제임스</option>
-                    <option>눈과립</option>
-                    <option>이광수</option>
+                    <option>呼嚕貓</option>
+                    <option>達文西</option>
+                    <option>馬斯克</option>
+                    <option>習維尼</option>
+                    <option>特斯拉</option>
+                    <option>字母哥</option>
+                    <option>金正恩</option>
                   </select>
                 </div>
               </div>
@@ -172,18 +172,6 @@
                   />
                   <label class="form-check-label" for="is_enabled">是否啟用</label>
                 </div>
-                <!-- check購買一次 -->
-                <div class="form-check">
-                  <input
-                    id="is_check"
-                    v-model="tempProduct.checkBtn"
-                    class="form-check-input"
-                    type="checkbox"
-                    :true-value="1"
-                    :false-value="0"
-                  />
-                  <label class="form-check-label" for="is_check">更改</label>
-                </div>
               </div>
             </div>
           </div>
@@ -217,8 +205,6 @@
 </template>
 
 <script>
-import 'bootstrap';
-
 export default {
   props: ['product'],
   data() {
@@ -238,6 +224,7 @@ export default {
     },
   },
   mounted() {
+    // eslint-disable-next-line no-undef
     this.modal = new bootstrap.Modal(this.$refs.modal);
   },
   methods: {
@@ -246,6 +233,8 @@ export default {
     },
     updateProduct(temp) {
       this.loading = true;
+      // eslint-disable-next-line no-param-reassign
+      temp.checkBtn = '0'; // 讓icon呈現購買
       let api = `${process.env.VUE_APP_URL}/api/${process.env.VUE_APP_PATH}/admin/product`;
       let method = 'post';
       if (temp.id) {
@@ -260,6 +249,7 @@ export default {
             this.loading = false;
             this.hideModal();
           } else {
+            // eslint-disable-next-line no-alert
             alert(res.data.message);
             this.loading = false;
           }

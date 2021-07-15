@@ -25,6 +25,10 @@ img{
 * {
     box-sizing: border-box;
 }
+// banner
+.tittleIndex a {
+    color: #fff;
+  }
 .h130{
     height: 230px;
 }
@@ -36,6 +40,9 @@ img{
 }
 .h25vh{
     height: 25vh;
+}
+.h40vh{
+    height: 40vh;
 }
 .wmin250{
     min-width: 250px;

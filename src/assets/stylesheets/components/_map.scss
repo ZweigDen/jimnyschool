@@ -1,0 +1,9 @@
+.gmap iframe{
+    width: 100%;
+    display: block;
+    pointer-events: none;
+    position: relative;
+    }
+.gmap iframe.clicked{
+    pointer-events: auto;
+    }

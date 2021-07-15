@@ -25,3 +25,12 @@
     background-size: cover;
     border-radius:8px 0 0 8px;
 }
+.detailProduct {
+    width: 50%;
+}
+
+@media (max-width: 415px) {
+    .detailProduct {
+        width: 100%;
+    }
+}

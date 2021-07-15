@@ -1,0 +1,63 @@
+.triangle {
+    list-style: none;
+    width: 700px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #efefef;
+    line-height:51px
+}
+
+.triangle li {
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 50px;
+    font-weight: bold;
+    color: #666666;
+    text-align: center;
+}
+
+.triangle li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -15px;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 25px 15px;
+    border-color:transparent transparent transparent #cccccc
+}
+
+.triangle li:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -14px;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 25px 15px;
+    border-color:transparent transparent transparent #efefef
+}
+
+.triangle li:last-child:before, .triangle li:last-child:after {
+    display:none
+}
+
+.triangle li.current {
+    background-color: #161616;
+    color:#ffffff
+}
+
+.triangle li.current:before, .triangle li.current:after {
+    border-color:transparent transparent transparent #161616
+}
+
+@media (max-width: 415px) {
+    .triangle {
+        width: 90%;
+    }
+}

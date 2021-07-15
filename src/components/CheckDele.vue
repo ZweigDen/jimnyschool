@@ -69,6 +69,7 @@ export default {
     };
   },
   mounted() {
+    // eslint-disable-next-line no-undef
     this.modal = new bootstrap.Modal(this.$refs.modal);
   },
   methods: {

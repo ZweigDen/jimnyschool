@@ -10,10 +10,11 @@
       <swiper
         :slides-per-view="4.2"
         :space-between="30"
+        :breakpoints="swiperOptions.breakpoints"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
       >
-        <swiper-slide class="swiperHover" v-for="item in list" :key="item.id">
+        <swiper-slide class="swiperHover" v-for="item in randomProduct" :key="item.id">
           <div class="text-dark text-decoration-none btn p-0 pickHover" @click="goToPage(item)">
             <img :src="item.imageUrl" alt="" class="pickBox" />
             <h4
@@ -35,13 +36,71 @@
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
 export default {
-  props: ['list'],
+  data() {
+    return {
+      products: [],
+      randomProduct: [],
+      swiperOptions: {
+        breakpoints: {
+          320: {
+            slidesPerView: 1.2,
+            spaceBetween: 10,
+          },
+          766: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 4.2,
+            spaceBetween: 30,
+          },
+        },
+      },
+    };
+  },
   components: {
     Swiper,
     SwiperSlide,
   },
+  mounted() {
+    this.getProducts();
+  },
   methods: {
+    // 取得產品
+    getProducts() {
+      const url = `${process.env.VUE_APP_URL}/api/${process.env.VUE_APP_PATH}/products/all`;
+      this.$http
+        .get(url)
+        .then((res) => {
+          if (res.data.success) {
+            this.products = res.data.products;
+            this.getRandomProduct();
+            console.log(res);
+          } else {
+            console.log(res);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    // 取得亂數產品列表
+    getRandomProduct() {
+      const maxSize = this.products.length <= 8 ? this.products.length : 10;
+      const arrSet = new Set([]);
+      for (let i = 0; arrSet.size < maxSize; i + 1) {
+        const num = getRandomInt(this.products.length);
+        arrSet.add(num);
+      }
+      arrSet.forEach((i) => {
+        this.randomProduct.push(this.products[i]);
+      });
+    },
     onSwiper(swiper) {
       console.log(swiper);
     },

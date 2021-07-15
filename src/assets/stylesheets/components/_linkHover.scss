@@ -70,3 +70,59 @@
 		width: 100%;
 	}
 }
+
+
+//1
+.shape-ex{
+    font-size: 18px;
+    vertical-align: middle;
+    position: relative;
+}
+.shape-ex:after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .3s linear;
+}
+.shape-ex:hover::after{
+    width: 100%;
+}
+
+// 2
+.shape-ex1{
+    font-size: 18px;
+    vertical-align: middle;
+    position: relative;
+}
+.shape-ex1:after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .3s linear;
+}
+.shape-ex1:hover::after{
+    width: 100%;
+}
+.shape-ex1:hover li{
+	color: #000;
+}
+.shape-ex1:hover {
+	background: #f4f4f4;
+}
+// other link
+.otherLink:hover a{
+    background: #fff;
+    border-radius:8px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    .line-ex1::after{
+        width: 100%;
+    }
+}
