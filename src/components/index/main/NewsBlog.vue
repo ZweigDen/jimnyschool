@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white pt-10 pb-5 newsBlogBox nbMargin">
-    <div class="container h50vh">
-      <div class="row">
+    <div class="container">
+      <div class="row h33vh">
         <div class="col-12 col-lg-6 mb-6 border-sm-0 border-bottom pb-1 mb-lg-0">
           <div class="d-sm-flex align-items-center mb-3">
             <h3 class="font-weight-bold mb-3 mb-sm-0">News</h3>
@@ -49,7 +49,6 @@
               </li>
             </ul>
           </div>
-          <div>
             <template v-for="item in articles" :key="item.id">
               <ul
                 class="list-unstyled d-flex align-items-center
@@ -57,9 +56,9 @@
                 v-if="this.statusNews == '0' && (item.author == '一般' || item.author == '重要')"
                 @click="goToPage(item)"
               >
-                <li class="col-1">{{ item.author }}</li>
-                <li class="col-2 me-2">{{ item.create_at }}</li>
-                <li class="fw-bolder text-start">{{ item.title }}</li>
+                <li class="col-1 h4 py-1">{{ item.author }}</li>
+                <li class="col-2 me-2 h4 py-1">{{ item.create_at }}</li>
+                <li class="fw-bolder text-start h4 py-1">{{ item.title }}</li>
               </ul>
               <ul
                 class="list-unstyled d-flex align-items-center
@@ -67,9 +66,9 @@
                 v-if="this.statusNews == '1' && item.author == '重要'"
                 @click="goToPage(item)"
               >
-                <li class="col-1">{{ item.author }}</li>
-                <li class="col-2 me-2">{{ item.create_at }}</li>
-                <li class="fw-bolder text-start">{{ item.title }}</li>
+                <li class="col-1 h4 py-1">{{ item.author }}</li>
+                <li class="col-2 me-2 h4 py-1">{{ item.create_at }}</li>
+                <li class="fw-bolder text-start h4 py-1">{{ item.title }}</li>
               </ul>
               <ul
                 class="list-unstyled align-items-center
@@ -77,12 +76,11 @@
                 v-if="this.statusNews == '2' && item.author == '一般'"
                 @click="goToPage(item)"
               >
-                <li class="col-1">{{ item.author }}</li>
-                <li class="col-2 me-2">{{ item.create_at }}</li>
-                <li class="fw-bolder text-start">{{ item.title }}</li>
+                <li class="col-1 h4 py-1">{{ item.author }}</li>
+                <li class="col-2 me-2 h4 py-1">{{ item.create_at }}</li>
+                <li class="fw-bolder text-start h4 py-1">{{ item.title }}</li>
               </ul>
             </template>
-          </div>
         </div>
         <div class="col-12 col-lg-6 border-bottom pb-1">
           <div class="d-sm-flex align-items-center mb-3">
@@ -144,53 +142,51 @@
               </li>
             </ul>
           </div>
-          <div>
-            <template v-for="item in articles" :key="item.id">
-              <ul
-                class="list-unstyled d-flex align-items-center
+          <template v-for="item in articles" :key="item.id">
+            <ul
+              class="list-unstyled d-flex align-items-center
                 border-bottom btn text-secondary shape-ex1 ps-0 mb-0"
-                v-if="
-                  this.statusBlog == '0' &&
-                    (item.author == '閒聊' || item.author == '面試' || item.author == '講義')
-                "
-                @click="goToPage(item)"
-              >
-                <li class="col-1">{{ item.author }}</li>
-                <li class="col-2 me-2">{{ item.create_at }}</li>
-                <li class="fw-bolder text-start">{{ item.title }}</li>
-              </ul>
-              <ul
-                class="list-unstyled d-flex align-items-center
+              v-if="
+                this.statusBlog == '0' &&
+                  (item.author == '閒聊' || item.author == '面試' || item.author == '講義')
+              "
+              @click="goToPage(item)"
+            >
+              <li class="col-1 h4 py-1">{{ item.author }}</li>
+              <li class="col-2 me-2 h4 py-1">{{ item.create_at }}</li>
+              <li class="fw-bolder text-start h4 py-1">{{ item.title }}</li>
+            </ul>
+            <ul
+              class="list-unstyled d-flex align-items-center
                 border-bottom btn text-secondary shape-ex1 ps-0 mb-0"
-                v-if="this.statusBlog == '1' && item.author == '閒聊'"
-                @click="goToPage(item)"
-              >
-                <li class="col-1">{{ item.author }}</li>
-                <li class="col-2 me-2">{{ item.create_at }}</li>
-                <li class="fw-bolder text-start">{{ item.title }}</li>
-              </ul>
-              <ul
-                class="list-unstyled d-flex border-bottom align-items-center
+              v-if="this.statusBlog == '1' && item.author == '閒聊'"
+              @click="goToPage(item)"
+            >
+              <li class="col-1 h4 py-1">{{ item.author }}</li>
+              <li class="col-2 me-2 h4 py-1">{{ item.create_at }}</li>
+              <li class="fw-bolder text-start h4 py-1">{{ item.title }}</li>
+            </ul>
+            <ul
+              class="list-unstyled d-flex border-bottom align-items-center
                 btn text-secondary shape-ex1 ps-0 mb-0"
-                v-if="this.statusBlog == '2' && item.author == '面試'"
-                @click="goToPage(item, 'blog')"
-              >
-                <li class="col-1">{{ item.author }}</li>
-                <li class="col-2 me-2">{{ item.create_at }}</li>
-                <li class="fw-bolder text-start">{{ item.title }}</li>
-              </ul>
-              <ul
-                class="list-unstyled d-flex border-bottom align-items-center
+              v-if="this.statusBlog == '2' && item.author == '面試'"
+              @click="goToPage(item, 'blog')"
+            >
+              <li class="col-1 h4 py-1">{{ item.author }}</li>
+              <li class="col-2 me-2 h4 py-1">{{ item.create_at }}</li>
+              <li class="fw-bolder text-start h4 py-1">{{ item.title }}</li>
+            </ul>
+            <ul
+              class="list-unstyled d-flex border-bottom align-items-center
                 btn text-secondary shape-ex1 ps-0 mb-0"
-                v-if="this.statusBlog == '3' && item.author == '講義'"
-                @click="goToPage(item, 'blog')"
-              >
-                <li class="col-1">{{ item.author }}</li>
-                <li class="col-2 me-2">{{ item.create_at }}</li>
-                <li class="fw-bolder text-start">{{ item.title }}</li>
-              </ul>
-            </template>
-          </div>
+              v-if="this.statusBlog == '3' && item.author == '講義'"
+              @click="goToPage(item, 'blog')"
+            >
+              <li class="col-1 h4 py-1">{{ item.author }}</li>
+              <li class="col-2 me-2 h4 py-1">{{ item.create_at }}</li>
+              <li class="fw-bolder text-start h4 py-1">{{ item.title }}</li>
+            </ul>
+          </template>
         </div>
       </div>
     </div>

@@ -94,7 +94,7 @@
                     <option>程式</option>
                     <option>商業</option>
                     <option>醫護</option>
-                    <option>其他</option>
+                    <option>公職</option>
                   </select>
                 </div>
                 <div class="form-group col-md-6">

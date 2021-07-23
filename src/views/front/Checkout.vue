@@ -24,7 +24,7 @@
     <Form
       class="text-center d-flex flex-column align-items-center"
       v-slot="{ errors }"
-      @submit="next(2)"
+      @submit="status = 2"
     >
       <div class="input input--nao position-relative">
         <Field
@@ -152,42 +152,193 @@
             sryle="width:200px"
             value="線上刷卡"
             v-model="form.user.pay"
+            :checked="form.user.pay === '線上刷卡'"
           />
           <label class="form-check-label h3" for="flexRadioDefault1">
             線上刷卡<i class="fab fa-cc-visa mx-1"></i><i class="fab fa-cc-mastercard mx-1"></i
             ><i class="fab fa-cc-jcb mx-1"></i>
           </label>
         </div>
+        <Form
+          class="text-center d-flex flex-column align-items-center"
+          v-slot="{ errors }"
+          @submit="next(3)"
+          :class="{ 'd-none': form.user.pay !== '線上刷卡' }"
+        >
+          <div class="input input--nao position-relative">
+            <Field
+              id="number"
+              name="卡號"
+              type="text"
+              class="input__field input__field--nao"
+              :class="{ 'is-invalid': errors['卡號'] }"
+              placeholder="請輸入 卡號"
+              rules="digits:25"
+              v-model="form.user.credit.number"
+            >
+            </Field>
+            <svg
+              class="graphic graphic--nao"
+              width="300%"
+              height="100%"
+              viewBox="0 0 1200 60"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,56.5c0,0,298.666,0,399.333,
+            0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,
+            200.999,10.5c95.996,0,402.001,0,402.001,0"
+              />
+            </svg>
+            <ErrorMessage
+              name="卡號"
+              class="invalid-feedback position-absolute top-0"
+            ></ErrorMessage>
+          </div>
+          <div class="input input--nao position-relative">
+            <Field
+              id="name"
+              name="姓名"
+              type="text"
+              class="input__field input__field--nao"
+              :class="{ 'is-invalid': errors['姓名'] }"
+              placeholder="請輸入 姓名"
+              rules="required"
+              v-model="form.user.credit.name"
+            >
+            </Field>
+            <svg
+              class="graphic graphic--nao"
+              width="300%"
+              height="100%"
+              viewBox="0 0 1200 60"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,56.5c0,0,298.666,0,399.333,
+            0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,
+            200.999,10.5c95.996,0,402.001,0,402.001,0"
+              />
+            </svg>
+            <ErrorMessage
+              name="姓名"
+              class="invalid-feedback position-absolute top-0"
+            ></ErrorMessage>
+          </div>
+          <div class="input input--nao position-relative">
+            <Field
+              id="date"
+              name="有效期限"
+              type="text"
+              class="input__field input__field--nao"
+              :class="{ 'is-invalid': errors['有效期限'] }"
+              placeholder="請輸入 MM/YY"
+              rules="required"
+              v-model="form.user.credit.date"
+            >
+            </Field>
+            <svg
+              class="graphic graphic--nao"
+              width="300%"
+              height="100%"
+              viewBox="0 0 1200 60"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,56.5c0,0,298.666,0,399.333,
+            0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,
+            200.999,10.5c95.996,0,402.001,0,402.001,0"
+              />
+            </svg>
+            <ErrorMessage
+              name="有效期限"
+              class="invalid-feedback position-absolute top-0"
+            ></ErrorMessage>
+          </div>
+          <div class="input input--nao position-relative mb-6">
+            <Field
+              id="pin"
+              name="安全碼"
+              type="number"
+              class="input__field input__field--nao"
+              :class="{ 'is-invalid': errors['安全碼'] }"
+              placeholder="請輸入 安全碼"
+              rules="digits:3"
+              v-model="form.user.credit.pin"
+            >
+            </Field>
+            <svg
+              class="graphic graphic--nao"
+              width="300%"
+              height="100%"
+              viewBox="0 0 1200 60"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,56.5c0,0,298.666,0,399.333,
+            0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,
+            200.999,10.5c95.996,0,402.001,0,402.001,0"
+              />
+            </svg>
+            <ErrorMessage
+              name="安全碼"
+              class="invalid-feedback position-absolute top-0"
+            ></ErrorMessage>
+          </div>
+          <button type="submit" class="btn btn-dark mb-6 magnifyText">下一步</button>
+        </Form>
         <div class="text-center"></div>
         <!-- 虛擬帳號 -->
-        <div class="form-check d-flex align-items-center border-top py-3">
-          <input
-            class="form-check-input me-3"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault2"
-            value="PayPal"
-            v-model="form.user.pay"
-          />
-          <label class="form-check-label h3" for="flexRadioDefault2">
-            PayPal<i class="fab fa-cc-paypal mx-1"></i>
-          </label>
-        </div>
-        <!-- 台銀轉 -->
-        <div class="form-check d-flex align-items-center border-top py-3">
+        <div class="form-check border-top py-3">
           <input
             class="form-check-input me-3"
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault3"
-            value="臺灣銀行線上轉帳"
+            value="PayPal"
             v-model="form.user.pay"
+            :checked="form.user.pay === 'PayPal'"
           />
-          <label class="form-check-label h3" for="flexRadioDefault3">
-            臺灣銀行線上轉帳
+          <label class="form-check-label h3 d-flex flex-column" for="flexRadioDefault3">
+            <div>PayPal</div>
+            <div class="text-secondary mt-3" :class="{ 'd-none': form.user.pay !== 'PayPal' }">
+              <h4 class="mb-2">
+                您可以在大約 1
+                分鐘內輕鬆註冊，並且您可以通過您常用的信用卡或銀行賬戶快速輕鬆地付款。
+                （無需網銀，無需轉賬手續費）
+              </h4>
+              <h3 class="text-info">
+                <i class="fab fa-cc-visa mx-1"></i><i class="fab fa-cc-mastercard mx-1"></i
+                ><i class="fab fa-cc-jcb mx-1"></i><i class="fab fa-cc-stripe mx-1"></i>
+                <i class="fab fa-cc-discover mx-1"></i>
+              </h3>
+            </div>
           </label>
         </div>
-        <div class="form-check d-flex align-items-center border-top py-3">
+        <!-- 台銀轉 -->
+        <div class="form-check border-top py-3">
+          <input
+            class="form-check-input me-3"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault4"
+            value="台灣銀行線上轉帳"
+            v-model="form.user.pay"
+            :checked="form.user.pay === '台灣銀行線上轉帳'"
+          />
+          <label class="form-check-label h3 d-flex flex-column" for="flexRadioDefault4">
+            <div>台灣銀行線上轉帳</div>
+            <h4
+              class="text-secondary mt-3"
+              :class="{ 'd-none': form.user.pay !== '台灣銀行線上轉帳' }"
+            >
+              速買配唯一推薦
+              <span class="text-light bg-info p-1 ms-2 rounded">支付費用：0</span>
+            </h4>
+          </label>
+        </div>
+        <!-- 7-11 -->
+        <div class="form-check border-top py-3">
           <input
             class="form-check-input me-3"
             type="radio"
@@ -195,12 +346,20 @@
             id="flexRadioDefault5"
             value="7-11 ibon"
             v-model="form.user.pay"
+            :checked="form.user.pay === '7-11 ibon'"
           />
-          <label class="form-check-label h3" for="flexRadioDefault5">
-            7-11 ibon
+          <label class="form-check-label h3 d-flex flex-column" for="flexRadioDefault5">
+            <div>7-11 ibon</div>
+            <h4 class="text-secondary mt-3" :class="{ 'd-none': form.user.pay !== '7-11 ibon' }">
+              <img src="@/assets/images/7-11.png" alt="" />7-11 ibon繳費。<span
+                class="text-light bg-info p-1 ms-2 rounded"
+                >手續費$15</span
+              >
+            </h4>
           </label>
         </div>
-        <div class="form-check d-flex align-items-center border-top py-3">
+        <!-- 全家 -->
+        <div class="form-check border-top py-3">
           <input
             class="form-check-input me-3"
             type="radio"
@@ -208,13 +367,20 @@
             id="flexRadioDefault6"
             value="FamiPort"
             v-model="form.user.pay"
+            :checked="form.user.pay === 'FamiPort'"
           />
-          <label class="form-check-label h3" for="flexRadioDefault6">
-            FamiPort
+          <label class="form-check-label h3 d-flex flex-column" for="flexRadioDefault6">
+            <div>FamiPort</div>
+            <h4 class="text-secondary mt-3" :class="{ 'd-none': form.user.pay !== 'FamiPort' }">
+              <img src="@/assets/images/familyMart.png" alt="" />全家代碼繳費。<span
+                class="text-light bg-info p-1 ms-2 rounded"
+                >手續費$15</span
+              >
+            </h4>
           </label>
         </div>
         <!-- applePay -->
-        <div class="form-check d-flex align-items-center border-top py-3">
+        <div class="form-check border-top py-3">
           <input
             class="form-check-input me-3"
             type="radio"
@@ -222,27 +388,45 @@
             id="flexRadioDefault7"
             value="ApplePay"
             v-model="form.user.pay"
+            :checked="form.user.pay === 'ApplePay'"
           />
-          <label class="form-check-label h3" for="flexRadioDefault7">
-            ApplePay<i class="fab fa-cc-apple-pay mx-1"></i>
+          <label class="form-check-label h3 d-flex flex-column" for="flexRadioDefault7">
+            <div>ApplePay<i class="fab fa-cc-apple-pay mx-1"></i></div>
+            <h4 class="text-secondary mt-3" :class="{ 'd-none': form.user.pay !== 'ApplePay' }">
+              只要輕輕一觸，就能以更快速、更簡單且更安全的方式付款。
+            </h4>
           </label>
         </div>
-        <div class="form-check d-flex align-items-center border-top py-3 mb-5">
+        <!-- 呼嚕幣 -->
+        <div class="form-check border-top py-3 mb-5">
           <input
             class="form-check-input me-3"
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault8"
             v-model="form.user.pay"
-            value="呼嚕幣"
-            checked
+            value="貓貓幣"
+            :checked="form.user.pay === '貓貓幣'"
           />
           <label class="form-check-label h3" for="flexRadioDefault8">
-            呼嚕幣
+            <div class="mb-3">貓貓幣</div>
+            <h4
+              class="text-secondary mb-3 text-start"
+              :class="{ 'd-none': form.user.pay !== '貓貓幣' }"
+            >
+              貓貓星球貨幣<span class="text-light bg-info p-1 ms-2 rounded"
+                >每養一隻 <i class="fas fa-cat"> 回饋 1 貓貓幣</i></span
+              >
+            </h4>
           </label>
         </div>
         <div class="d-flex justify-content-center">
-          <button type="buttom" class="btn btn-dark mb-6 magnifyText" @click="next(3)">
+          <button
+            type="buttom"
+            class="btn btn-dark mb-6 magnifyText"
+            :class="{ 'd-none': form.user.pay === '線上刷卡' }"
+            @click="status = 3"
+          >
             下一步
           </button>
         </div>
@@ -251,125 +435,34 @@
     </div>
   </section>
   <!-- 確認 -->
-  <section class="container" v-if="status === 3">
-    <div class="row">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-6 col-12">
-        <div class="mb-7 border-bottom pb-4">
-          <h2 class="mb-4">購買的課程</h2>
-          <table class="table align-middle">
-            <thead>
-              <tr class="text-info">
-                <th scope="col"></th>
-                <th scope="col">課程名稱</th>
-                <th scope="col">類別</th>
-                <th scope="col">價格</th>
-              </tr>
-            </thead>
-            <tbody v-for="item in carts" :key="item.product.id">
-              <tr>
-                <th scope="row">
-                  <img :src="item.product.imageUrl" alt="" style="width:120px;height:90px" />
-                </th>
-                <td>{{ item.product.title }}</td>
-                <td>{{ item.product.category }}</td>
-                <td>{{ $toCurrency(item.final_total) }}</td>
-              </tr>
-            </tbody>
-          </table>
-          <h3 class="text-end">總金額：＄{{ $toCurrency(total) }}</h3>
-        </div>
-        <div class="mb-7 pb-4">
-          <div class="d-flex justify-content-between align-items-center">
-            <h2 class="mb-4">買方資料</h2>
-            <button type="button" class="btn btn-outline-info" @click="next(1)">修改</button>
-          </div>
-          <table class="table align-middle">
-            <thead>
-              <tr class="text-info">
-                <th scope="col"></th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">姓名</th>
-                <td>{{ form.user.name }}</td>
-              </tr>
-              <tr>
-                <th scope="row">電話</th>
-                <td>{{ form.user.tel }}</td>
-              </tr>
-              <tr>
-                <th scope="row">信箱</th>
-                <td>{{ form.user.email }}</td>
-              </tr>
-              <tr>
-                <th scope="row">地址</th>
-                <td>{{ form.user.address }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="mb-7 pb-4">
-          <div class="d-flex justify-content-between align-items-center">
-            <h2 class="mb-4">付款方式</h2>
-            <button type="button" class="btn btn-outline-info" @click="next(2)">修改</button>
-          </div>
-          <table class="table align-middle">
-            <thead>
-              <tr class="text-info">
-                <th scope="col"></th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">付款方式</th>
-                <td>{{ form.user.pay }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="d-flex justify-content-center">
-          <button type="buttom" class="btn btn-dark mb-6 magnifyText" @click="createOrder">
-            下一步
-          </button>
-        </div>
-      </div>
-      <div class="col-sm-3"></div>
-    </div>
-  </section>
+  <Check @next="next" @createorder="createOrder" :form="form" v-if="status === 3"></Check>
   <!-- 完工撒花～ -->
-  <section class="d-flex flex-column align-items-center mb-7" v-if="status === 4">
-    <h3 class="mb-5">感謝你的購買</h3>
-    <h4>訂單編號：{{ order.orderId }}</h4>
-  </section>
+  <Final :order="order" v-if="status === 4"></Final>
 </template>
 
 <script>
+import Check from '@/components/checkout/Check.vue';
+import Final from '@/components/checkout/Final.vue';
+
 export default {
   data() {
     return {
       form: {
         user: {
-          name: '',
-          email: '',
-          tel: '',
-          address: '',
-          pay: '呼嚕幣',
+          pay: '貓貓幣',
+          credit: {},
         },
       },
-      carts: [],
-      total: '',
       id: '',
       status: 1,
       order: {},
     };
   },
-  mounted() {
-    this.getCart();
+  components: {
+    Check,
+    Final,
   },
+  mounted() {},
   methods: {
     isPhone(value) {
       const phoneNumber = /^(09)[0-9]{8}$/;
@@ -378,16 +471,6 @@ export default {
     // 付款步驟
     next(num) {
       this.status = num;
-    },
-    getCart() {
-      const url = `${process.env.VUE_APP_URL}/api/${process.env.VUE_APP_PATH}/cart`;
-      this.$http.get(url).then((res) => {
-        if (res.data.success) {
-          console.log(res);
-          this.carts = res.data.data.carts;
-          this.total = res.data.data.final_total;
-        }
-      });
     },
     createOrder() {
       const order = this.form;

@@ -91,7 +91,7 @@ export default {
     },
     // 取得亂數產品列表
     getRandomProduct() {
-      const maxSize = this.products.length <= 8 ? this.products.length : 10;
+      const maxSize = this.products.length < 8 ? this.products.length : 10;
       const arrSet = new Set([]);
       for (let i = 0; arrSet.size < maxSize; i + 1) {
         const num = getRandomInt(this.products.length);

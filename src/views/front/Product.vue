@@ -121,7 +121,7 @@
       </template>
     </swiper>
   </section>
-  <!-- 結帳按鈕 -->
+  <!-- 返回 -->
   <section class="d-flex justify-content-center p-7 mb-4">
     <router-link
       to="/front/courses"

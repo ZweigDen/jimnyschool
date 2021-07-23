@@ -23,7 +23,7 @@
       id="offcanvasMenu"
     >
       <div class="offcanvas-body p-lg-9 p-sm-3 d-sm-flex flex-column justify-content-between">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-mlg-3 g-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           <div class="col">
             <div class="card border-0">
               <div class="card-body">

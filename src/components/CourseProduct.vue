@@ -1,9 +1,9 @@
 /* eslint-disable vue/no-use-v-if-with-v-for */
 <template>
   <!-- 語文 -->
-  <section class="p-sm-7 pt-7 p-5">
-    <div class="mb-3 border-bottom border-dark">
-      <p class="h1 d-flex text-dark">
+  <section class="p-sm-7 pt-7">
+    <div class="mb-3 mb-3 p-5 p-sm-0">
+      <p class="h1 d-flex text-dark border-bottom border-dark">
         <span style="animation-delay: calc(1s * 0.1);" data-aos="animate__rotateInDownLeft"
           ><i class="fas fa-language"></i></span
         ><span style="animation-delay: calc(1s * 0.2);" data-aos="animate__rotateInDownLeft"
@@ -17,9 +17,16 @@
         ></span>
       </p>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <template v-for="item in products" :key="item.id">
-        <div class="col mb-3" v-if="item.category == '語文'">
+    <swiper
+      :slides-per-view="3"
+      :space-between="30"
+      :breakpoints="swiperOptions.breakpoints"
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
+    >
+    <template v-for="item in products" :key="item.id">
+      <swiper-slide v-if="item.category == '語文'">
+        <div class="mb-3">
           <div
             class="card h-100 shadow"
             :style="{
@@ -75,13 +82,14 @@
             </div>
           </div>
         </div>
+      </swiper-slide>
       </template>
-    </div>
+    </swiper>
   </section>
   <!-- 程式 -->
-  <section class="p-sm-7 pt-7 p-5">
-    <div class="mb-3 border-bottom border-dark">
-      <p class="h1 d-flex text-dark align-items-center">
+  <section class="ps-sm-7 pb-sm-7 pt-7 p-0">
+    <div class="mb-3 mb-3 p-5 p-sm-0">
+      <p class="h1 d-flex text-dark align-items-center border-bottom border-dark">
         <span
           class="d-flex align-items-center"
           style="animation-delay: calc(1s * 0.1);"
@@ -106,9 +114,16 @@
         ></span>
       </p>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <template v-for="item in products" :key="item.id">
-        <div class="col mb-3" v-if="item.category == '程式'">
+    <swiper
+      :slides-per-view="3"
+      :space-between="0"
+      :breakpoints="swiperOptions.breakpoints"
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
+    >
+    <template v-for="item in products" :key="item.id">
+      <swiper-slide v-if="item.category == '程式'">
+        <div class="mb-3">
           <div
             class="card h-100 shadow"
             :style="{
@@ -131,7 +146,7 @@
                 </h3>
                 <p class="card-text">講師：{{ item.unit }}</p>
                 <h5 class="card-text mb-2">
-                  價格＄<span class="fw-bolder fst-italic"> {{ $toCurrency(item.price) }}</span
+                  價格＄<span class="fw-bolder fst-italic">{{ $toCurrency(item.price) }}</span
                   >｜時數 <span class="fw-bolder fst-italic">{{ item.origin_price }}</span> 小時
                 </h5>
                 <div
@@ -139,6 +154,7 @@
                   role="status"
                   :class="{ 'd-none': status != item.id }"
                 ></div>
+                <!-- 購物車按鈕 -->
                 <div class="d-flex justify-content-center" :class="{ 'd-none': status == item.id }">
                   <button
                     class="button button--pipaluk button--text-thick rounded-3 wmin250 py-2"
@@ -163,13 +179,14 @@
             </div>
           </div>
         </div>
+      </swiper-slide>
       </template>
-    </div>
+    </swiper>
   </section>
   <!-- 商業 -->
-  <section class="p-sm-7 pt-7 p-5">
-    <div class="mb-3 border-bottom border-dark">
-      <p class="h1 d-flex text-dark align-items-center">
+  <section class="ps-sm-7 pb-sm-7 pt-7 p-0">
+    <div class="mb-3 mb-3 p-5 p-sm-0">
+      <p class="h1 d-flex text-dark align-items-center border-bottom border-dark">
         <span
           class="d-flex align-items-center"
           style="animation-delay: calc(1s * 0.2);"
@@ -198,9 +215,16 @@
         </span>
       </p>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <template v-for="item in products" :key="item.id">
-        <div class="col mb-3" v-if="item.category == '商業'">
+    <swiper
+      :slides-per-view="3"
+      :space-between="0"
+      :breakpoints="swiperOptions.breakpoints"
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
+    >
+    <template v-for="item in products" :key="item.id">
+      <swiper-slide v-if="item.category == '商業'">
+        <div class="mb-3">
           <div
             class="card h-100 shadow"
             :style="{
@@ -223,7 +247,7 @@
                 </h3>
                 <p class="card-text">講師：{{ item.unit }}</p>
                 <h5 class="card-text mb-2">
-                  價格＄<span class="fw-bolder fst-italic"> {{ $toCurrency(item.price) }}</span
+                  價格＄<span class="fw-bolder fst-italic">{{ $toCurrency(item.price) }}</span
                   >｜時數 <span class="fw-bolder fst-italic">{{ item.origin_price }}</span> 小時
                 </h5>
                 <div
@@ -231,6 +255,7 @@
                   role="status"
                   :class="{ 'd-none': status != item.id }"
                 ></div>
+                <!-- 購物車按鈕 -->
                 <div class="d-flex justify-content-center" :class="{ 'd-none': status == item.id }">
                   <button
                     class="button button--pipaluk button--text-thick rounded-3 wmin250 py-2"
@@ -255,13 +280,14 @@
             </div>
           </div>
         </div>
+      </swiper-slide>
       </template>
-    </div>
+    </swiper>
   </section>
   <!-- 醫護 -->
-  <section class="p-sm-7 pt-7 p-5">
-    <div class="mb-3 border-bottom border-dark">
-      <p class="h1 d-flex text-dark align-items-center">
+  <section class="ps-sm-7 pb-sm-7 pt-7 p-0">
+    <div class="mb-3 mb-3 p-5 p-sm-0">
+      <p class="h1 d-flex text-dark align-items-center border-bottom border-dark">
         <span
           class="d-flex align-items-center"
           style="animation-delay: calc(1s * 0.2);"
@@ -290,9 +316,16 @@
         </span>
       </p>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <template v-for="item in products" :key="item.id">
-        <div class="col mb-3" v-if="item.category == '醫護'">
+     <swiper
+      :slides-per-view="3"
+      :space-between="0"
+      :breakpoints="swiperOptions.breakpoints"
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
+    >
+    <template v-for="item in products" :key="item.id">
+      <swiper-slide v-if="item.category == '醫護'">
+        <div class="mb-3">
           <div
             class="card h-100 shadow"
             :style="{
@@ -315,7 +348,7 @@
                 </h3>
                 <p class="card-text">講師：{{ item.unit }}</p>
                 <h5 class="card-text mb-2">
-                  價格＄ <span class="fw-bolder fst-italic">{{ $toCurrency(item.price) }}</span
+                  價格＄<span class="fw-bolder fst-italic">{{ $toCurrency(item.price) }}</span
                   >｜時數 <span class="fw-bolder fst-italic">{{ item.origin_price }}</span> 小時
                 </h5>
                 <div
@@ -323,6 +356,7 @@
                   role="status"
                   :class="{ 'd-none': status != item.id }"
                 ></div>
+                <!-- 購物車按鈕 -->
                 <div class="d-flex justify-content-center" :class="{ 'd-none': status == item.id }">
                   <button
                     class="button button--pipaluk button--text-thick rounded-3 wmin250 py-2"
@@ -347,13 +381,14 @@
             </div>
           </div>
         </div>
+      </swiper-slide>
       </template>
-    </div>
+    </swiper>
   </section>
   <!-- 公職 -->
-  <section class="p-sm-7 pt-7 p-5">
-    <div class="mb-3 border-bottom border-dark">
-      <p class="h1 d-flex text-dark align-items-center">
+  <section class="ps-sm-7 pb-sm-7 pt-7 p-0">
+    <div class="mb-3 mb-3 p-5 p-sm-0">
+      <p class="h1 d-flex text-dark align-items-center border-bottom border-dark">
         <span
           class="d-flex align-items-center"
           style="animation-delay: calc(1s * 0.2);"
@@ -369,10 +404,10 @@
           ></i
         ></span>
         <span style="animation-delay: calc(1s * 0.2);" data-aos="animate__rotateInDownLeft"
-          >其</span
+          >公</span
         >
         <span style="animation-delay: calc(1s * 0.3);" data-aos="animate__rotateInDownLeft"
-          >他</span
+          >職</span
         >
         <span style="animation-delay: calc(1s * 0.4);" data-aos="animate__rotateInDownLeft"
           >類</span
@@ -382,9 +417,16 @@
         </span>
       </p>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <template v-for="item in products" :key="item.id">
-        <div class="col mb-3" v-if="item.category == '其他'">
+    <swiper
+      :slides-per-view="3"
+      :space-between="0"
+      :breakpoints="swiperOptions.breakpoints"
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
+    >
+    <template v-for="item in products" :key="item.id">
+      <swiper-slide v-if="item.category == '公職'">
+        <div class="mb-3">
           <div
             class="card h-100 shadow"
             :style="{
@@ -407,7 +449,7 @@
                 </h3>
                 <p class="card-text">講師：{{ item.unit }}</p>
                 <h5 class="card-text mb-2">
-                  價格＄ <span class="fw-bolder fst-italic">{{ $toCurrency(item.price) }}</span
+                  價格＄<span class="fw-bolder fst-italic">{{ $toCurrency(item.price) }}</span
                   >｜時數 <span class="fw-bolder fst-italic">{{ item.origin_price }}</span> 小時
                 </h5>
                 <div
@@ -415,6 +457,7 @@
                   role="status"
                   :class="{ 'd-none': status != item.id }"
                 ></div>
+                <!-- 購物車按鈕 -->
                 <div class="d-flex justify-content-center" :class="{ 'd-none': status == item.id }">
                   <button
                     class="button button--pipaluk button--text-thick rounded-3 wmin250 py-2"
@@ -439,21 +482,44 @@
             </div>
           </div>
         </div>
+      </swiper-slide>
       </template>
-    </div>
+    </swiper>
   </section>
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
 export default {
   data() {
     return {
       status: '',
       products: [],
       carts: [],
+      swiperOptions: {
+        breakpoints: {
+          320: {
+            slidesPerView: 1.2,
+            spaceBetween: 25,
+          },
+          766: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3.3,
+            spaceBetween: 30,
+          },
+        },
+      },
     };
   },
   props: ['product', 'loading', 'cart'],
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
   watch: {
     product() {
       this.products = this.product;
