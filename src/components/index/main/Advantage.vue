@@ -60,8 +60,11 @@
             'background-image': 'url(' + require('../../../assets/images/charm-01.jpg') + ')',
           }"
         >
-          <div class="text-white d-none d-sm-block">
-            <div class="ps-sm-7 p-2 col-lg-3 col-sm-6">
+          <div class="text-white d-none d-sm-block ps-3">
+            <div
+              class="ps-sm-7 p-2 shadow-lg col-lg-3 col-sm-6"
+              style="background: hsla(0,0%,100%,.2);"
+            >
               <h5 class="mb-1 ps-3 fw-bolder">獲得了自己的力量去就業</h5>
               <h2 class="mb-2"># 就業超能力</h2>
               <h5 class="mb-4 lh-base">
@@ -86,8 +89,11 @@
             'background-image': 'url(' + require('../../../assets/images/charm-02.jpg') + ')',
           }"
         >
-          <div class="text-white d-none d-sm-block">
-            <div class="ps-sm-7 p-2 flexPostion col-lg-3 col-sm-6 text-white">
+          <div class="text-white d-none d-sm-block ps-3">
+            <div
+              class="ps-sm-7 p-2 shadow-lg flexPostion col-lg-3 col-sm-6 text-white"
+              style="background: hsla(0,0%,100%,.2);"
+            >
               <h5 class="mb-1 ps-3">將課程融入生活</h5>
               <h2 class="mb-2"># 互助超能力</h2>
               <h5 class="mb-4 lh-base">
@@ -97,14 +103,14 @@
           </div>
         </div>
         <div class="bg-white text-dark d-sm-none">
-            <div class="ps-sm-7 p-2 col-lg-3 col-sm-6">
-              <h5 class="mb-1 ps-3">將課程融入生活</h5>
-              <h2 class="mb-2 text-decoration-underline"># 互助超能力</h2>
-              <h5 class="mb-4 lh-base">
-                除了求職之外，你還將實際學習在工作場所和個人生活中如何與他人互相幫助，對你的將來生活有用的終身能力的技能。
-              </h5>
-            </div>
+          <div class="ps-sm-7 p-2 col-lg-3 col-sm-6">
+            <h5 class="mb-1 ps-3">將課程融入生活</h5>
+            <h2 class="mb-2 text-decoration-underline"># 互助超能力</h2>
+            <h5 class="mb-4 lh-base">
+              除了求職之外，你還將實際學習在工作場所和個人生活中如何與他人互相幫助，對你的將來生活有用的終身能力的技能。
+            </h5>
           </div>
+        </div>
         <!-- 3 -->
         <div
           class="py-8 d-block bg-white text-dark text-decoration-none bgSet advantageBox"
@@ -112,8 +118,11 @@
             'background-image': 'url(' + require('../../../assets/images/charm-03.jpg') + ')',
           }"
         >
-          <div class="text-white d-none d-sm-block">
-            <div class="ps-sm-7 p-2 col-lg-3 col-sm-6">
+          <div class="text-white d-none d-sm-block ps-3">
+            <div
+              class="ps-sm-7 p-2 col-lg-3 col-sm-6 shadow-lg"
+              style="background: hsla(0,0%,100%,.2);"
+            >
               <h5 class="mb-1 ps-3">我們沒有師生隔閡</h5>
               <h3 class="mb-2"># 導師吸引力</h3>
               <h5 class="mb-4 lh-base">
@@ -126,17 +135,16 @@
           </div>
         </div>
         <div class="bg-white text-dark d-sm-none">
-            <div class="ps-sm-7 p-2 col-lg-3 col-sm-6">
-              <h5 class="mb-1 ps-3">我們沒有師生隔閡</h5>
-              <h3 class="mb-2 text-decoration-underline"># 導師吸引力</h3>
-              <h5 class="mb-4 lh-base">
-                我們學校有優美的學習環境，整個校園都可以看到師生交流。
-                你可以隨時諮詢學校生活的煩惱和未來的擔憂，
-                畢業後也歡迎對教育有興趣的學員成為學院導師
-                ，每個人都是獨立的個體，因此我們注重每個人的想法。
-              </h5>
-            </div>
+          <div class="ps-sm-7 p-2 col-lg-3 col-sm-6">
+            <h5 class="mb-1 ps-3">我們沒有師生隔閡</h5>
+            <h3 class="mb-2 text-decoration-underline"># 導師吸引力</h3>
+            <h5 class="mb-4 lh-base">
+              我們學校有優美的學習環境，整個校園都可以看到師生交流。
+              你可以隨時諮詢學校生活的煩惱和未來的擔憂， 畢業後也歡迎對教育有興趣的學員成為學院導師
+              ，每個人都是獨立的個體，因此我們注重每個人的想法。
+            </h5>
           </div>
+        </div>
         <!-- 4 -->
         <div
           class="py-8 d-block bg-white text-dark text-decoration-none bgSet advantageBox"
@@ -144,8 +152,11 @@
             'background-image': 'url(' + require('../../../assets/images/charm-04.jpg') + ')',
           }"
         >
-          <div class="text-white d-none d-sm-block">
-            <div class="ps-sm-7 p-2 flexPostion col-lg-3 col-sm-6">
+          <div class="text-white d-none d-sm-block ps-3">
+            <div
+              class="ps-sm-7 p-2 flexPostion col-lg-3 col-sm-6 shadow-lg"
+              style="background: hsla(0,0%,100%,.2);"
+            >
               <h5 class="mb-1 ps-3">各種資質</h5>
               <h3 class="mb-2"># 激發你的潛在資質超能力</h3>
               <h5 class="mb-4 lh-base">
@@ -155,14 +166,14 @@
           </div>
         </div>
         <div class="text-dark bg-white d-sm-none">
-            <div class="ps-sm-7 p-2 col-lg-3 col-sm-6">
-              <h5 class="mb-1 ps-3">各種資質</h5>
-              <h3 class="mb-2 text-decoration-underline"># 激發你的潛在資質超能力</h3>
-              <h5 class="mb-4 lh-base">
-                我們的學生在求學期間獲得了許多資格證書。這是因為他們渴望挑戰的不僅是自己擅長的領域，他們也學習其他專業領域的資格。我們學校將激發出你所有領域的資質。
-              </h5>
-            </div>
+          <div class="ps-sm-7 p-2 col-lg-3 col-sm-6">
+            <h5 class="mb-1 ps-3">各種資質</h5>
+            <h3 class="mb-2 text-decoration-underline"># 激發你的潛在資質超能力</h3>
+            <h5 class="mb-4 lh-base">
+              我們的學生在求學期間獲得了許多資格證書。這是因為他們渴望挑戰的不僅是自己擅長的領域，他們也學習其他專業領域的資格。我們學校將激發出你所有領域的資質。
+            </h5>
           </div>
+        </div>
       </div>
     </div>
   </section>

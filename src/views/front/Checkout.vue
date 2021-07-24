@@ -20,7 +20,7 @@
     </ol>
   </section>
   <!-- 表單 -->
-  <section class="container" v-if="status === 1">
+  <section class="container" v-show="status === 1">
     <Form
       class="text-center d-flex flex-column align-items-center"
       v-slot="{ errors }"
@@ -138,7 +138,7 @@
     </Form>
   </section>
   <!-- pay -->
-  <section class="container" v-if="status === 2">
+  <section class="container" v-show="status === 2">
     <div class="row">
       <div class="col-sm-4 col-1"></div>
       <div class="col-sm-4 col-10">
@@ -435,9 +435,9 @@
     </div>
   </section>
   <!-- 確認 -->
-  <Check @next="next" @createorder="createOrder" :form="form" v-if="status === 3"></Check>
+  <Check @next="next" @createorder="createOrder" :form="form" v-show="status === 3"></Check>
   <!-- 完工撒花～ -->
-  <Final :order="order" v-if="status === 4"></Final>
+  <Final :order="order" v-show="status === 4"></Final>
 </template>
 
 <script>

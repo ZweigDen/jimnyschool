@@ -1,7 +1,7 @@
 <template>
-  <section class="bg-white pt-10 pb-5 newsBlogBox nbMargin">
+  <section class="bg-white pt-10 pb-5 newsBlogBox">
     <div class="container">
-      <div class="row h33vh">
+      <div class="row">
         <div class="col-12 col-lg-6 mb-6 border-sm-0 border-bottom pb-1 mb-lg-0">
           <div class="d-sm-flex align-items-center mb-3">
             <h3 class="font-weight-bold mb-3 mb-sm-0">News</h3>
